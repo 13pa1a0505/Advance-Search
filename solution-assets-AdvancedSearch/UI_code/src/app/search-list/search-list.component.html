@@ -1,0 +1,37 @@
+<h2>Search using name</h2>
+<form #searchlistForm="ngForm" (ngSubmit)="searchbook(searchInput.value)">
+
+  <div class="form-group">
+    <label for="name">Enter book name</label>
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search.." required #searchInput>
+
+  </div>
+  <button type="submit" class="btn btn-primary" style="margin:50px" [disabled]="!searchlistForm.valid"> Submit</button>
+</form>
+
+<div *ngIf="searchLeng>0">
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>PriceRange</th>
+      <th>Language</th>
+      <th>Condition</th>
+      <th>Category</th>
+      <th>Format</th>
+    </tr>
+    <tr *ngFor='let o of searchData'>
+
+      <td>{{o.name }}</td>
+      <td>{{o.priceRange }}</td>
+      <td>{{o.language }}</td>
+      <td>{{o.condition }}</td>
+      <td>{{o.category }}</td>
+      <td>{{o.format }}</td>
+
+    </tr>
+  </table>
+
+</div>
+<div *ngIf="searchLeng===0">
+ <h2>{{noResultFound}}</h2> 
+</div>

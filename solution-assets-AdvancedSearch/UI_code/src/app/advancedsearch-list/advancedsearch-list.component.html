@@ -1,0 +1,174 @@
+<body>
+    <div class="container">
+        <form #advancedsearchlistForm="ngForm" (ngSubmit)="advancedsearchbook(advancedsearchlistForm.value)">
+            <div class="form-group">
+                <label for="name">Enter book name</label>
+                <input class="form-control" type="text" name="name" [(ngModel)]="newAdvancedsearchList.name"
+                    #name="ngModel" 
+                     autocomplete="off" placeholder="book name..">
+               
+            </div>
+            <div class="options" >
+                <!-- Price range -->
+                <div class="form-check ">
+                    <h3>Price Range</h3>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="pricerange" name="pricerange" value="400-999"
+                            [(ngModel)]=newAdvancedsearchList.pricerange />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 400-999
+                    </label>
+                </div >
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="pricerange" name="pricerange" value="1000-1999"
+                            [(ngModel)]=newAdvancedsearchList.pricerange />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1000-1999
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="pricerange" name="pricerange" value="2000-2999"
+                            [(ngModel)]=newAdvancedsearchList.pricerange />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2000-2999
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="pricerange" name="pricerange" value="3000-3999"
+                            [(ngModel)]=newAdvancedsearchList.pricerange />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3000-3999
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="pricerange" name="pricerange" value="4000-4999"
+                            [(ngModel)]=newAdvancedsearchList.pricerange />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4000-4999
+                    </label>
+                </div>
+                <br>
+            </div>
+                <!--  Language  -->
+
+                <div class="options">
+                <h3>Language</h3>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="language" name="language" value="English"
+                            [(ngModel)]=newAdvancedsearchList.language />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; English
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="language" name="language" value="Hindi"
+                            [(ngModel)]=newAdvancedsearchList.language />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hindi
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="language" name="language" value="French"
+                            [(ngModel)]=newAdvancedsearchList.language />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; French
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="language" name="language" value="Spanish"
+                            [(ngModel)]=newAdvancedsearchList.language />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spanish
+                    </label>
+                </div>
+            </div>
+                <!-- Condition -->
+                <div class="options">
+                <div class="form-check ">
+                    <h3>Condition</h3>
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="condition" name="condition" value="New"
+                            [(ngModel)]=newAdvancedsearchList.condition />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="condition" name="condition" value="Old"
+                            [(ngModel)]=newAdvancedsearchList.condition />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Old
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="condition" name="condition" value="Any"
+                            [(ngModel)]=newAdvancedsearchList.condition />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Any
+                    </label>
+                </div>
+            </div>
+                <!--  Format  -->
+                <div class="options">
+                <h3>Format</h3>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="format" name="format" value="KindleFormat"
+                            [(ngModel)]=newAdvancedsearchList.format />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kindle Format
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="format" name="format" value="LongPrint"
+                            [(ngModel)]=newAdvancedsearchList.format />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Long Print
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="format" name="format" value="PaperFormat"
+                            [(ngModel)]=newAdvancedsearchList.format />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Paper Format
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" id="format" name="format" value="AudioCD"
+                            [(ngModel)]=newAdvancedsearchList.format />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Audio CD
+                    </label>
+                </div>
+            </div>
+
+                <button type="submit" class="btn btn-primary search-btn" >
+                    Submit </button>
+        </form>
+    </div>
+</body>
+<div *ngIf="searchLeng>0">
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>PriceRange</th>
+            <th>Language</th>
+            <th>Condition</th>
+            <th>Category</th>
+            <th>Format</th>
+        </tr>
+        <tr *ngFor='let o of newAdvancedsearchList'>
+
+            <td>{{o.name }}</td>
+            <td>{{o.priceRange }}</td>
+            <td>{{o.language }}</td>
+            <td>{{o.condition }}</td>
+            <td>{{o.category }}</td>
+            <td>{{o.format }}</td>
+
+        </tr>
+    </table>
+
+</div>
+
+<div *ngIf="searchLeng===0">
+    <h2>{{noResultFound}}</h2>
+</div>

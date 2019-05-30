@@ -1,0 +1,10 @@
+.options {
+    display:inline-block;
+    height: 300px;
+    vertical-align: top;
+    padding: 20px;
+
+}
+.search-btn{
+    display: block;
+}
